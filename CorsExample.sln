@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorsAPI", "CorsAPI\CorsAPI.csproj", "{B66041A0-8F7F-4611-90F0-33CC27CD6912}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorsWebApp", "CorsWebApp\CorsWebApp.csproj", "{4675D6E0-F185-488A-8503-B60E095141A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B66041A0-8F7F-4611-90F0-33CC27CD6912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B66041A0-8F7F-4611-90F0-33CC27CD6912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B66041A0-8F7F-4611-90F0-33CC27CD6912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B66041A0-8F7F-4611-90F0-33CC27CD6912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4675D6E0-F185-488A-8503-B60E095141A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4675D6E0-F185-488A-8503-B60E095141A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4675D6E0-F185-488A-8503-B60E095141A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4675D6E0-F185-488A-8503-B60E095141A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CDB6649-2B4E-4D0D-878F-C22C9EAE2897}
+	EndGlobalSection
+EndGlobal

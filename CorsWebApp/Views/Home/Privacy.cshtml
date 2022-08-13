@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+<div>
+    <table class="table">
+    <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+    <tbody id="EmployeeList">
+
+    </tbody>
+</table>
+</div>
+
+<br /><br />
+<div>
+    <table class="table">
+    <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Expiry</th>
+          </tr>
+        </thead>
+    <tbody id="ProductList">
+
+    </tbody>
+</table>
+</div>
+<script>
+$(document).ready(function() {
+
+    $.ajax({
+        type: "GET",
+        url: "http://localhost:5157/Employee/",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function(response) {
+            //Clear all previous list of members  
+            $("#EmployeeList").empty();
+
+            $.each(response, function(propName, propVal) {
+                console.log(propName, propVal);
+                $("#EmployeeList").append('<tr><td>' + propVal.id + '</td><td>' + propVal.name + '</td><td>' + propVal.address + '</td></tr>');
+            });
+        },
+        failure: function(response) {
+            console.log(response.responseText);
+            console.log("Failure");
+        },
+        error: function(response) {
+            console.log(response);
+            console.log("Error");
+        }
+    });
+
+
+    $.ajax({
+        type: "GET",
+        url: "http://localhost:5157/Product/",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function(response) {
+            //Clear all previous list of members  
+            $("#ProductList").empty();
+
+            $.each(response, function(propName, propVal) {
+                console.log(propName, propVal);
+                $("#ProductList").append('<tr><td>' + propVal.id + '</td><td>' + propVal.name + '</td><td>' + propVal.expiry + '</td></tr>');
+            });
+        },
+        failure: function(response) {
+            console.log(response.responseText);
+            console.log("Failure");
+        },
+        error: function(response) {
+            console.log(response);
+            console.log("Error");
+        }
+    });
+});  
+</script>
